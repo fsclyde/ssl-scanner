@@ -29,12 +29,8 @@ python main.py
 
 Edit the file **config.py** and add the absolute file path of the domain file that you want to use.
 
-```
 vim alldomainscanner/config.py
-
 DOMAIN="[domain-file-path]"
-
-```
 
 Then use **scanner.py** to scanner your URL 
  
