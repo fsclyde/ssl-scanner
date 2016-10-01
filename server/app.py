@@ -77,13 +77,13 @@ def spec():
 class HealthCheck(Resource):
     def get(self):
 
-        scan_endpoint_resp, scan_code = get_response("https://scan.in.ft.com:443/api/ssl/v1.0/scan",withoutparam = False )
-        compliant_endpoint_resp, compliant_code  = get_response("https://scan.in.ft.com:443/api/ssl/v1.0/amicompliant", withoutparam = False)
-        ssl_dashboard_resp, ssl_dashboard_code = get_response("https://scan.in.ft.com/api/ssl/v1.0/details/scan.in.ft.com", withoutparam = True)
+        scan_endpoint_resp, scan_code = get_response("http://127.0.0.1:8080/api/ssl/v1.0/scan",withoutparam = False )
+        compliant_endpoint_resp, compliant_code  = get_response("http://127.0.0.1:8080/api/ssl/v1.0/amicompliant", withoutparam = False)
+        ssl_dashboard_resp, ssl_dashboard_code = get_response("http://127.0.0.1:8080/api/ssl/v1.0/details/scan.in.ft.com", withoutparam = True)
 
         status = {
                     'schemaVersion': u'1',
-                    'systemCode': u'ft-securityapi',
+                    'systemCode': u'alldomainscanner',
                     'name': u'SSLscanner',
                     'description': u'SSL scanner components: scan, compliance checking, getmetrics',
                     'checks': [
@@ -93,8 +93,8 @@ class HealthCheck(Resource):
                         'ok': scan_endpoint_resp,
                         'severity': 2,
                         'businessImpact': u'None',
-                        'technicalSummary': u'Scan FT URL and display the vulnerability',
-                        'panicGuide': u'http://git.svc.ft.com/projects/SEC/repos/ft-securityapi/browse/runbook/securityapi.md',
+                        'technicalSummary': u'Scan URL and display the vulnerability',
+                        'panicGuide': u'',
                         'checkOutput': u'splunk or nagios'
 
                     },
@@ -104,8 +104,8 @@ class HealthCheck(Resource):
                         'ok': compliant_endpoint_resp,
                         'severity': 2,
                         'businessImpact': u'None',
-                        'technicalSummary': u'Scan FT URL and display the compliance. https://sites.google.com/a/ft.com/security/securityapi/sslscan',
-                        'panicGuide': u'http://git.svc.ft.com/projects/SEC/repos/ft-securityapi/browse/runbook/securityapi.md',
+                        'technicalSummary': u'',
+                        'panicGuide': u'',
                         'checkOutput': u'splunk or nagios'
 
                     },
@@ -115,8 +115,8 @@ class HealthCheck(Resource):
                         'ok': ssl_dashboard_resp,
                         'severity': 2,
                         'businessImpact': u'None',
-                        'technicalSummary': u'Scan a the whole FT URL and display the compliance. https://sites.google.com/a/ft.com/security/securityapi/sslscan',
-                        'panicGuide': u'http://git.svc.ft.com/projects/SEC/repos/ft-domainscanner/browse/runbook/ftdomainscanner.md',
+                        'technicalSummary': u'Scan a the whole URL and display the compliance.',
+                        'panicGuide': u'',
                         'checkOutput': u'splunk or nagios'
 
                     }
