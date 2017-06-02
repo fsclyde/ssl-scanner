@@ -6,9 +6,8 @@ import base64
 import uuid
 
 #TODO - generalise this....
-baseDIR = "/opt/websecapi/server"
 logDirRoot = "/var/log/apps/"
-databaseDIR = "/opt/websecapi/server/db"
+databaseDIR = "db/"
 
 logdir = logDirRoot+"sslscan.log"
 apilogger = logging.getLogger('sslscan')
@@ -29,7 +28,7 @@ except_dos_vuln = "DoS threat"
 
 class ConfigClass():
     def __init__(self):
-        self.db = databaseDIR+"/sslscan.db"
+        self.db = databaseDIR+"sslscan.db"
 
 def base36_encode(number):
     assert number >= 0, 'positive integer required'

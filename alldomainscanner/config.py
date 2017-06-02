@@ -11,9 +11,9 @@ import logging.handlers
 
 URL="http://127.0.0.1:8080/api/ssl/v1.0/amicompliant"
 
-DOMAIN="[domain-file-path]"
-JOURNAL="/var/log/domainscanner_error.log"
-DOMSCANLOGS="/var/log/domainscanner.log"
+DOMAIN="../resources/domains.txt"
+JOURNAL="/var/log/apps/domainscanner_apps.log"
+DOMSCANLOGS="/var/log/apps/domainscanner.log"
 
 FORMAT="%(asctime)-15s %(message)s"
 

@@ -137,7 +137,7 @@ if __name__ == '__main__':
     for row in report_file:
 
         httpcode, compliance, output_scan = MyURLScanner.scan_entry(row, args.skipcache, args.showdetails)
-        print(httpcode, compliance, row)
+        print httpcode, compliance, row
 				
 
 

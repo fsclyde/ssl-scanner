@@ -1,7 +1,6 @@
 import os
 import logging
 from flask import Flask, render_template, Response, send_from_directory, request, current_app
-from mydaemon import daemonise
 
 app = Flask(__name__)
 logging.basicConfig()
