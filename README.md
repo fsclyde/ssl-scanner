@@ -17,7 +17,6 @@ First start with the SSL / TLS Scanner.
 
 The SSL Scanner will listen on: http://127.0.0.1:8080
 
-![SSL/TLS Dashboard](https://github.com/fsclyde/ssl-scanner/blob/master/resources/sslscan_dashboard.png "Dashboard")
 
 Then, you can carry on with alldomainscanner, which contain the script which will scan the whole list of domain name and shows the results.
 
@@ -49,10 +48,14 @@ alldomainscanner will perform the scan of the list of URL present within the fil
 
 Go to **http://127.0.0.1:8081/reports**
 
-* [Financial Times Implementation](https://scan.in.ft.com)
+* [Financial Times Implementation](https://scan.in.ft.com/reports)
 
 ### Some interesting links about SSL / TLS
 
 * [SSL/TLS History](https://www.feistyduck.com/ssl-tls-and-pki-history/)
 * [TLS Understanding](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 * [SSL/TLS Penetration testing cheat sheet](http://www.exploresecurity.com/wp-content/uploads/custom/SSL_manual_cheatsheet.html)
+
+### Implementation
+
+![SSL/TLS Dashboard](https://github.com/fsclyde/ssl-scanner/blob/master/resources/sslscan_dashboard.png "Dashboard")
